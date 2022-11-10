@@ -2,16 +2,10 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
+import {LOGIN, REGISTER} from '../constants/routeNames';
+import LoginScreen from '../screens/LoginScreen';
 
 const AuthStack = createStackNavigator();
-
-const LoginScreen = () => {
-  return (
-    <View>
-      <Text>Login Screen</Text>
-    </View>
-  );
-};
 
 const RegisterScreen = () => {
   return (
@@ -23,13 +17,9 @@ const RegisterScreen = () => {
 
 const AuthNavigator = () => {
   return (
-    <AuthStack.Navigator>
-      <AuthStack.Screen
-        name="Login Screen"
-        component={LoginScreen}></AuthStack.Screen>
-      <AuthStack.Screen
-        name="Register Screen"
-        component={RegisterScreen}></AuthStack.Screen>
+    <AuthStack.Navigator screenOptions={{headerShown: false}}>
+      <AuthStack.Screen name={LOGIN} component={LoginScreen} />
+      <AuthStack.Screen name={REGISTER} component={RegisterScreen} />
     </AuthStack.Navigator>
   );
 };

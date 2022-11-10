@@ -20,4 +20,6 @@ Build App ReactNative
 - Can [react-native-reanimated] de run navigation:
   + Link config: https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/installation/
   + File: babel.config.js
-- 
+
+3. Man hinh Login
+4. Man hinh Register

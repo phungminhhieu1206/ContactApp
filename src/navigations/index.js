@@ -6,7 +6,7 @@ import AuthNavigator from './AuthNavigator';
 import {navigationRef} from './RootNavigator';
 
 const AppNavContainer = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   return (
     <>
