@@ -3,9 +3,16 @@ import {View, Text} from 'react-native';
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {LOGIN, REGISTER} from '../constants/routeNames';
-import LoginScreen from '../screens/LoginScreen';
 
 const AuthStack = createStackNavigator();
+
+const LoginScreen = () => {
+  return (
+    <View>
+      <Text>Login Screen</Text>
+    </View>
+  );
+};
 
 const RegisterScreen = () => {
   return (
