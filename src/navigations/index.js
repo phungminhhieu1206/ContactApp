@@ -1,16 +1,19 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {NavigationContainer} from '@react-navigation/native';
-import {SafeAreaView, Text} from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import {useState} from 'react';
+import DrawerNavigator from './DrawerNavigator';
+import AuthNavigator from './AuthNavigator';
+import {navigationRef} from './RootNavigator';
 
 const AppNavContainer = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
+
   return (
-    <NavigationContainer>
-      <SafeAreaView>
-        <Text>Hello world</Text>
-        <Icon name="settings" size={22} color="red" />
-      </SafeAreaView>
-    </NavigationContainer>
+    <>
+      <NavigationContainer ref={navigationRef}>
+        {isAuthenticated ? <DrawerNavigator /> : <AuthNavigator />}
+      </NavigationContainer>
+    </>
   );
 };
 
