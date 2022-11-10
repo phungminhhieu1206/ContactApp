@@ -3,16 +3,18 @@ Build App ReactNative
 - dùng SafeAreaView thay vì dùng View
 
 1. Cau truc thu muc
-- config: cau hinh theo moi truong phat trien
+- config: chua cac cau hinh theo moi truong phat trien
 - helpers: chua ben thu ba (firebase, axios)
 - utils: chua cac style (validate, ..)
 - .env: chua root API
 
 2. Navigation
+- Can tuan thu cac buoc cai dat navigation
 - Cai react-nativation global, navigationContainer theo huong dan:
   (Link: https://reactnavigation.org/docs/getting-started/)
 - Stack-Navigator:
   + Cai dat react-native-gesture-handler !
-    (Hien loi: ERROR [react-native-gesture-handler] react-native-gesture-handler module was not found ! (Bao do tren simulator))
-    (Fix: stop run metro - cd android - ./graplew clean - rerun metro & run-android)
+    (Hien loi: ERROR [react-native-gesture-handler] react-native-gesture-handler module was not found ! (Bao do tren may ao))
+    (Fix: stop run metro - cd android - ./graplew clean - npx react-native start & npx react-native run-android)
+- Tao HomeNavigator: tao component HomeNavigator, tao const cac Screens demo, ghep navigator truoc
 - 
