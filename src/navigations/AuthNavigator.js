@@ -3,24 +3,10 @@ import {View, Text, SafeAreaView} from 'react-native';
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {LOGIN, REGISTER} from '../constants/routeNames';
+import LoginScreen from '../screens/auth/LoginScreen';
+import RegisterScreen from '../screens/auth/RegisterScreen';
 
 const AuthStack = createStackNavigator();
-
-const LoginScreen = () => {
-  return (
-    <SafeAreaView>
-      <Text>Login Screen</Text>
-    </SafeAreaView>
-  );
-};
-
-const RegisterScreen = () => {
-  return (
-    <SafeAreaView>
-      <Text>Register Screen</Text>
-    </SafeAreaView>
-  );
-};
 
 const AuthNavigator = () => {
   return (
