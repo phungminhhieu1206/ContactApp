@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, TextInput, StyleSheet} from 'react-native';
 import colors from '../../assets/theme/colors';
 
+// Định nghĩa các props truyền từ nơi gọi nó vào
 const CustomInput = ({
   onChangeText,
   value,
@@ -10,7 +11,7 @@ const CustomInput = ({
   icon,
   iconPosition,
   error,
-  ...props
+  ...props // dành cho những props chưa định nghĩa phía trên
 }) => {
   const [focused, setFocused] = useState(false);
 

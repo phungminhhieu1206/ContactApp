@@ -1,12 +1,19 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {NavigationContainer} from '@react-navigation/native';
-import {useState} from 'react';
+import {useContext, useState} from 'react';
 import DrawerNavigator from './DrawerNavigator';
 import AuthNavigator from './AuthNavigator';
 import {navigationRef} from './RootNavigator';
+import {GlobalContext} from '../context/Provider';
 
 const AppNavContainer = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  // const {
+  //   authState: {isLoggedIn},
+  // } = useContext(GlobalContext);
+
+  // console.log(isLoggedIn);
 
   return (
     <>

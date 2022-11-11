@@ -1,5 +1,5 @@
 /* eslint-disable react/self-closing-comp */
-import {View, Text} from 'react-native';
+import {View, Text, SafeAreaView} from 'react-native';
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {LOGIN, REGISTER} from '../constants/routeNames';
@@ -8,17 +8,17 @@ const AuthStack = createStackNavigator();
 
 const LoginScreen = () => {
   return (
-    <View>
+    <SafeAreaView>
       <Text>Login Screen</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
 const RegisterScreen = () => {
   return (
-    <View>
+    <SafeAreaView>
       <Text>Register Screen</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
