@@ -11,8 +11,8 @@ const LoginScreen = () => {
    */
 
   // local state
-  const [form, setForm] = useState({});
-  const [justSignedUp, setJustSignedUp] = useState(false);
+  const [form, setForm] = useState({}); // username + password
+  const [justSignedUp, setJustSignedUp] = useState(false); // đẩy thông báo ra màn login khi đki thành công
 
   const {params} = useRoute();
   /**
@@ -22,17 +22,23 @@ const LoginScreen = () => {
    * + Thực hiện useEffect(() => {}, [params]) bất cứ khi nào có sự thay đổi params
    * + ... đổi dữ liệu nhận được vào form, báo user x vừa đăng kí, mời đăng nhập.
    */
-  //   React.useEffect(() => {
-  //     if (params?.data) {
-  //       // console.log('params ----> ', params);
+  React.useEffect(() => {
+    /**
+     * Nếu có data trong route truyền về thì đki thành công
+     */
+    if (params?.data) {
+      // console.log('params ----> ', params);
 
-  //       setJustSignedUp(true);
-  //       setForm({
-  //         ...form,
-  //         userName: params.data.username,
-  //       });
-  //     }
-  //   }, [params]);
+      setJustSignedUp(true);
+      /**
+       * Nhập luôn userName trong form login
+       */
+      setForm({
+        ...form,
+        userName: params.data.username,
+      });
+    }
+  }, [params]);
 
   // global state
   const {
@@ -50,9 +56,9 @@ const LoginScreen = () => {
 
   const onSubmit = () => {
     // console.log('hellooooooo', form);
-    // if (form.userName && form.password) {
-    //   login(form)(authDispatch);
-    // }
+    if (form.userName && form.password) {
+      login(form)(authDispatch);
+    }
   };
 
   return (
